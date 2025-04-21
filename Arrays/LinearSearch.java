@@ -1,38 +1,33 @@
-package Arrays;
 
-import java.util.Iterator;
+public class LinearSearch
+{
+    public static int Linear(int arr[], int key)
+    {
+        for(int i = 0; i <= arr.length ; i++)
+        {
+            if(arr[i] == key)
+            {
+                return i;
+            }
+        }
+        return -1;
 
-public class LinearSearch {
-	
-	public static int linear(int array[] , int key) {
-		
-		for(int i=1; i <= array.length; i++)
-		{
-			if (array[i] == key) {
-				
-				return i;
-			}
-		}
-		return -1;
-	}
-	
-	
-	
-	public static void main(String agr[])
-	{
-		int array[] = {2,4,6,8,10,12,14,16};
-    	int key =  10;
-    	
-    	int index = linear(array,key);
-//		
-    	System.out.println("the index of key is :- " +index);
-    	
-//		for(int i= 1 ; i <= array.length; i++)
-//		{
-//			if (array[i] == key) {
-//				System.out.println("The index of key is :-" +i);
-//			}
-//		}
-	}
+    }
 
+    public static void main(String[] args) {
+        
+        int arr[] = {2,4,5,4,7,5,12};
+        int Key = 4;
+        
+        int index = Linear(arr,Key);
+
+        if(index == -1)
+        {
+            System.out.println("Not fount");
+        }else
+        {
+          System.out.println("the index of key is : " + index);
+        }
+
+    }
 }
